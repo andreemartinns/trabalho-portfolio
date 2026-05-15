@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio profissional de desenvolvedor full-stack — projetos, habilidades e contato." />
+  <title>Alex.dev — Portfólio</title>
+
+  <!-- Google Fonts: Syne (display) + DM Mono (code feel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- =====================
+       VIEW: stylesheet
+       ===================== -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =====================
+       VIEW: skip link (acessibilidade WCAG)
+       ===================== -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- =====================
+       VIEW: Header / Nav
+       ===================== -->
+  <header class="header" role="banner">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#hero" class="nav__logo" aria-label="Voltar ao início">
+        <span class="logo-bracket">{</span> alex.dev <span class="logo-bracket">}</span>
+      </a>
+
+      <!-- Menu desktop -->
+      <ul class="nav__links" role="list">
+        <li><a href="#about"    class="nav__link" aria-label="Sobre mim">Sobre</a></li>
+        <li><a href="#projects" class="nav__link" aria-label="Projetos">Projetos</a></li>
+        <li><a href="#skills"   class="nav__link" aria-label="Habilidades">Skills</a></li>
+        <li><a href="#contact"  class="nav__link nav__link--cta" aria-label="Contato">Contato</a></li>
+      </ul>
+
+      <!-- Menu mobile toggle -->
+      <button
+        class="nav__toggle"
+        id="menuToggle"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="burger" aria-hidden="true"></span>
+        <span class="burger" aria-hidden="true"></span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu drawer -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu de navegação mobile" hidden>
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="#about"    class="mobile-menu__link">Sobre</a></li>
+        <li><a href="#projects" class="mobile-menu__link">Projetos</a></li>
+        <li><a href="#skills"   class="mobile-menu__link">Skills</a></li>
+        <li><a href="#contact"  class="mobile-menu__link">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =====================
+         VIEW: Hero Section
+         ===================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__badge" aria-label="Status de disponibilidade">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Disponível para projetos
+        </div>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__greeting">Olá, eu sou</span>
+          <span class="hero__name" id="heroName">Alex Ferreira</span>
+          <span class="hero__role" id="heroRole">Full-Stack Developer</span>
+        </h1>
+
+        <p class="hero__subtitle" id="heroSubtitle">
+          Transformo ideias complexas em experiências digitais elegantes. 
+          Código limpo, design que comunica, resultados que impressionam.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary" aria-label="Ver meus projetos">
+            Ver projetos
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#contact" class="btn btn--ghost" aria-label="Entrar em contato">
+            Vamos conversar
+          </a>
+        </div>
+
+        <div class="hero__stats" role="list" aria-label="Estatísticas profissionais">
+          <div class="stat" role="listitem">
+            <span class="stat__number" id="statProjects">0</span>
+            <span class="stat__label">Projetos</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat__number" id="statYears">0</span>
+            <span class="stat__label">Anos exp.</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat__number" id="statClients">0</span>
+            <span class="stat__label">Clientes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile photo area -->
+      <div class="hero__photo-wrap" aria-hidden="true">
+        <div class="hero__photo-ring"></div>
+        <div class="hero__photo" id="heroPhoto">
+          <span class="hero__initials" id="heroInitials">AF</span>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Rolar para a seção Sobre">
+        <span class="scroll-dot" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- =====================
+         VIEW: About Section
+         ===================== -->
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 — SOBRE</span>
+          <h2 class="section-title" id="about-title">Quem sou eu</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="about__lead" id="aboutLead"></p>
+            <p class="about__body" id="aboutBody"></p>
+            <div class="about__highlights" id="aboutHighlights" role="list" aria-label="Destaques profissionais"></div>
+          </div>
+
+          <div class="about__card glass-card" aria-label="Informações rápidas">
+            <ul class="about__info-list" id="aboutInfoList" role="list" aria-label="Detalhes pessoais"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         VIEW: Projects Section
+         ===================== -->
+    <section class="projects section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 — PROJETOS</span>
+          <h2 class="section-title" id="projects-title">O que construí</h2>
+        </div>
+
+        <div class="projects__grid" id="projectsGrid" role="list" aria-label="Lista de projetos"></div>
+      </div>
+    </section>
+
+    <!-- =====================
+         VIEW: Skills Section
+         ===================== -->
+    <section class="skills section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03 — HABILIDADES</span>
+          <h2 class="section-title" id="skills-title">Meu toolkit</h2>
+        </div>
+
+        <div class="skills__categories" id="skillsGrid" role="list" aria-label="Categorias de habilidades"></div>
+      </div>
+    </section>
+
+    <!-- =====================
+         VIEW: Contact Section
+         ===================== -->
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 — CONTATO</span>
+          <h2 class="section-title" id="contact-title">Vamos trabalhar juntos</h2>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info">
+            <p class="contact__intro" id="contactIntro"></p>
+            <ul class="contact__channels" id="contactChannels" role="list" aria-label="Canais de contato"></ul>
+          </div>
+
+          <form class="contact__form glass-card" id="contactForm" novalidate aria-label="Formulário de contato">
+            <div class="form-group">
+              <label for="inputName" class="form-label">Nome</label>
+              <input
+                type="text"
+                id="inputName"
+                name="name"
+                class="form-input"
+                placeholder="Seu nome completo"
+                autocomplete="name"
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="form-label">E-mail</label>
+              <input
+                type="email"
+                id="inputEmail"
+                name="email"
+                class="form-input"
+                placeholder="seu@email.com"
+                autocomplete="email"
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="inputMessage" class="form-label">Mensagem</label>
+              <textarea
+                id="inputMessage"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Conte-me sobre seu projeto..."
+                rows="5"
+                aria-required="true"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" aria-label="Enviar mensagem">
+              Enviar mensagem <span aria-hidden="true">→</span>
+            </button>
+            <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================
+       VIEW: Footer
+       ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__copy" id="footerCopy"></p>
+      <ul class="footer__socials" id="footerSocials" role="list" aria-label="Redes sociais"></ul>
+    </div>
+  </footer>
+
+  <!-- =====================
+       MVC JavaScript — Model, View, Controller
+       (ordem: model → view → controller)
+       ===================== -->
+  <script src="model.js"></script>
+  <script src="view.js"></script>
+  <script src="controller.js"></script>
+</body>
+</html>
